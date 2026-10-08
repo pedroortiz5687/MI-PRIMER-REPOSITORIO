@@ -36,3 +36,12 @@
 - Resolvio el problema de escribir mucho por que ya resiclamos una libreria que hace cosas automaticas agilizando nuestro backend.
 - Mejora las respuestas del servidor.
 
+
+
+## P5
+- Mi predicción: Creo que me va a mandar en la terminal lo mismo pero no me deja entrar al citio por que no esta la ruta como es.
+- Lo que pasó: Efectivamente mando la fecha y la hora y la peticion a la terminal, tambien no dejo entrar a la ruta pero mo fue por lo que dije sino por que el middleware tomo la peticion. 
+- Por qué pasó:Paso por que el next se quedo con la peticion y no de jo pasar a la otra.
+
+
+## P6
