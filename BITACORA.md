@@ -45,3 +45,12 @@
 
 
 ## P6
+- Mi predicción:Pienso que el codigo de estado es de 200 porque si esta y el body creo que seria algo asi "id":1
+- Lo que pasó: Casi pasa lo que dije pero no el codigo de estado si paso pero el body no era.
+- Por qué pasó: Porque el 1 del id esta sin comillas y el de la url esta con comillas entonces el === hizo lo suyo y dijo que no eran iguales y pues quedo en blanco.
+
+
+## P7
+- Mi predicción: Pienso que sin el return no va dar un retorno si llaman la peticion y no da una respuesta.
+- Lo que pasó:Sin el return, el navegador igual mostró el mensaje de 404 y no salió ningún error en la terminal.
+- Por qué pasó:Sin return, el código no se detiene después de responder y sigue leyendo las líneas de abajo.

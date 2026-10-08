@@ -26,11 +26,17 @@ app.get('/actividades', (req, res) => {
 });
 
 app.get('/actividades/:id', (req, res) => {
-  console.log('params:', req.params);
-  const actividad = actividades.find((a) => a.id === req.params.id);
+  const id = Number(req.params.id);
+  const actividad = actividades.find((a) => a.id === id);
+
+  if (!actividad) {
+    return res.status(404).json({
+      mensaje: `No existe la actividad con id ${req.params.id}`
+    });
+  }
+
   res.json(actividad);
 });
-
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
