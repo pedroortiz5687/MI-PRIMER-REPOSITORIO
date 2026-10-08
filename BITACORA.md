@@ -26,5 +26,13 @@
 - Y me enrrede un poco por la cantidad de informacion que teniamos que hacer.
 
 
+## P4
+- Mi predicción: Yo pienso que va escribir que no encuentra nada y va a votar un error 404.
+- Lo que pasó: Efectivamente paso lo ya descrito y mando el error 404.
+- Por qué pasó: Por que solo esta programado con la ruta / no con  /no_existe por eso automaticamente dio ese resultado 
 
+
+## REFLEXION FINAL 
+- Resolvio el problema de escribir mucho por que ya resiclamos una libreria que hace cosas automaticas agilizando nuestro backend.
+- Mejora las respuestas del servidor.
 
