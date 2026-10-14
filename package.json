@@ -2,10 +2,11 @@
   "name": "trabajo-bakend",
   "version": "1.0.0",
   "description": "",
-  "main": "servidor-nativo.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "app.js",
+"scripts": {
+  "dev": "node --watch app.js",
+  "start": "node app.js"
+},
   "keywords": [],
   "author": "pedro suarez",
   "license": "ISC",

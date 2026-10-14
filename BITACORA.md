@@ -60,3 +60,16 @@
 - Mi predicción:Pienso que aparte de /actividades?tipo=agua.  las otras dos apareceran como error y por que no existe nada llamado asi ademas la de tipo fuego pieso que sera error 404 por que no exixte un direccion llamada asi.
 - Lo que pasó: No paso lo que esperaba en ambas predicciones dieron 200 pero con lista vacia entonces me equivoque.
 - Por qué pasó: Paso por que el error 404 da cuando algo no exixte pero como /atividades si existe entonces si es un 200 lo que pasa es que dentro de /actividades no encontro ni fuego ni AGUA entonces mostro una lista vacia como diciendo si esta pero no lo encontre encambio agua si devolvio algo, ademas agrege toLowerCase() para poner todo en minuscula.  
+
+## P9
+- Mi predicción: Pienso que voy a recibir un codifgo de estado de 200 y el body es el escrito en thunder client.
+- Lo que pasó: : Recibí 201 Created como predije en parte (yo dije 200). El primer intento, sin express.json(), devolvió solo { "id": 5 } y en la terminal req.body salió undefined. Después de agregar express.json(), salió el objeto completo.
+- Por qué pasó: Pasa por que el body llega como texto y Express no lo convierte en objeto a menos de que se lo pida con express.json().
+
+
+
+
+## P10
+- Mi predicción:Creo que la actividad nueva  si va a estar  después de reiniciar el servidor, porque  pues ya se guardo .
+- Lo que pasó:creé la Espeleología con POST y la vi en la lista con 5 actividades. Después de reiniciar el servidor volvieron a salir solo 4. Mi predicción fue incorrecta.
+- Por qué pasó:La actividad solo se guardó en la memoria del servidor. Al reiniciarse, el servidor leyó el código de nuevo y la lista volvió a empezar con las 4 originales.
