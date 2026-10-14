@@ -84,3 +84,20 @@
 
 ## CONCLUSION 
 Express decide qué código ejecutar siguiendo estrictamente el orden en el que están definidas las rutas y middlewares en el archivo, pasando la petición al siguiente bloque mediante next si la ruta actual no coincide o no finaliza la respuesta.
+
+
+
+## P12
+- Mi predicción: Pienso que al pedir GET /actividades/gratis me va a devolver
+  la lista de actividades con precio 0, porque la ruta existe en el código.
+- Lo que pasó: No devolvió la lista de actividades gratis. Respondió status
+  404 con el mensaje {"mensaje":"No existe la actividad con id gratis"}.
+  Después de mover la ruta /actividades/gratis arriba de /actividades/:id,
+  respondió 200 con solo la Caminata Camino Real a Barichara (precio 0).
+- Por qué pasó: Express lee las rutas de arriba hacia abajo. Como
+  /actividades/:id estaba primero y :id acepta cualquier texto, tomó "gratis"
+  como si fuera un id. Number('gratis') da NaN, el find no encontró nada y
+  respondió 404, sin llegar nunca a /actividades/gratis. Se arregló sin
+  cambiar la URL poniendo la ruta específica antes de la ruta con parámetro.
+  Es el mismo principio del orden que vi en P11.
+
