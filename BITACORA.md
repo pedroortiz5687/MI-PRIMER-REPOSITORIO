@@ -54,3 +54,9 @@
 - Mi predicción: Pienso que sin el return no va dar un retorno si llaman la peticion y no da una respuesta.
 - Lo que pasó:Sin el return, el navegador igual mostró el mensaje de 404 y no salió ningún error en la terminal.
 - Por qué pasó:Sin return, el código no se detiene después de responder y sigue leyendo las líneas de abajo.
+
+
+## P8
+- Mi predicción:Pienso que aparte de /actividades?tipo=agua.  las otras dos apareceran como error y por que no existe nada llamado asi ademas la de tipo fuego pieso que sera error 404 por que no exixte un direccion llamada asi.
+- Lo que pasó: No paso lo que esperaba en ambas predicciones dieron 200 pero con lista vacia entonces me equivoque.
+- Por qué pasó: Paso por que el error 404 da cuando algo no exixte pero como /atividades si existe entonces si es un 200 lo que pasa es que dentro de /actividades no encontro ni fuego ni AGUA entonces mostro una lista vacia como diciendo si esta pero no lo encontre encambio agua si devolvio algo, ademas agrege toLowerCase() para poner todo en minuscula.  

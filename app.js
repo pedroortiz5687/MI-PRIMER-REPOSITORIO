@@ -22,7 +22,13 @@ const actividades = [
 ];
 
 app.get('/actividades', (req, res) => {
-  res.json(actividades);
+console.log('query:', req.query);
+const { tipo } = req.query;
+if (!tipo) {
+return res.json(actividades);
+}
+const filtradas = actividades.filter((a) => a.tipo === tipo.toLowerCase());
+res.json(filtradas);
 });
 
 app.get('/actividades/:id', (req, res) => {
