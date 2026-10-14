@@ -73,3 +73,14 @@
 - Mi predicción:Creo que la actividad nueva  si va a estar  después de reiniciar el servidor, porque  pues ya se guardo .
 - Lo que pasó:creé la Espeleología con POST y la vi en la lista con 5 actividades. Después de reiniciar el servidor volvieron a salir solo 4. Mi predicción fue incorrecta.
 - Por qué pasó:La actividad solo se guardó en la memoria del servidor. Al reiniciarse, el servidor leyó el código de nuevo y la lista volvió a empezar con las 4 originales.
+
+
+## P11
+- Mi predicción:Pienso que manda un error por que no dejara pasar peticione mas abajo  
+- Lo que pasó:Si mueves el bloque del middleware 404  al inicio, justo después de express.json(), todas las peticiones  caerán inmediatamente en ese middleware y devolverán el mensaje de error 404.
+- Por qué pasó: Express evalúa las rutas y middlewares en orden secuencial (de arriba hacia abajo). Si encuentra un app.use() genérico al principio que no llama a next(), la petición se detiene ahí y se responde de inmediato, sin llegar a leer las rutas que están escritas más abajo.
+
+
+
+## CONCLUSION 
+Express decide qué código ejecutar siguiendo estrictamente el orden en el que están definidas las rutas y middlewares en el archivo, pasando la petición al siguiente bloque mediante next si la ruta actual no coincide o no finaliza la respuesta.
